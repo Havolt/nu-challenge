@@ -13,6 +13,17 @@
     document.getElementsByClassName(apndClassName)[apndClassNum].appendChild(newEl);
  }
 
+ function createSecHeader(title, className, apnd){
+    creEl('div', [className, 'sectionHead'], apnd, 0);
+    creEl('div', 'sectionHeadTitle', className, 0, '', title);
+    creEl('img', 'sectionHeadImg', className, 0, 'imgs/nu-section-header-img.png');
+ }
+
+ function createTicketRow(iconInHL, className, apnd){
+     creEl('div', [className, 'ticketSection'], apnd, 0);
+     creEl('div', 'ticketSectionIcon', className, 0, '', iconInHL);
+ }
+
  //List of elements to be created
  function makeElList(){
     creEl('div', 'site', 'app', 0);
@@ -33,6 +44,25 @@
     creEl('div', 'festivalTitleContain', 'festivalData', 0)
     creEl('div', 'festivalTitle', 'festivalTitleContain', 0, '', 'HYPER Festival LAUNCH PARTY');
     creEl('div', 'festivalDialog', 'festivalTitleContain', 0, '', '<i class="fa fa-eye"></i> Open Dialog');
+    creEl('table', 'festivalDataInfo', 'festivalData', 0);
+    creEl('tr', 'festivalInfoTopRow', 'festivalDataInfo', 0);
+    creEl('td', 'festivalInfoLeftVal', 'festivalInfoTopRow', 0, '', 'When');
+    creEl('td', 'festivalInfoRightVal', 'festivalInfoTopRow', 0, '', '29 July 2016')
+    creEl('td', 'festivalInfoLeftVal', 'festivalInfoTopRow', 0, '', 'Tickets sold');
+    creEl('td', 'festivalInfoRightVal', 'festivalInfoTopRow', 0, '', '12,642')
+    creEl('tr', 'festivalInfoBottomRow', 'festivalDataInfo', 0);
+    creEl('td', 'festivalInfoLeftVal', 'festivalInfoBottomRow', 0, '', 'Where');
+    creEl('td', 'festivalInfoRightVal', 'festivalInfoBottomRow', 0, '', 'Hypo Expo Manchester')
+    creEl('td', 'festivalInfoLeftVal', 'festivalInfoBottomRow', 0, '', 'Subscribed to list');
+    creEl('td', 'festivalInfoRightVal', 'festivalInfoBottomRow', 0, '', '648')
+    //Make Statistics Section
+    creEl('div', 'statisticsSection', 'content', 0);
+    creEl('div', ['statLeft', 'statBox'], 'statisticsSection', 0);
+    creEl('div', ['statRight', 'statBox'], 'statisticsSection', 0);
+    //Make Left Hand Stats Section Contents
+    creEl('div', ['sectionContain','bestTixContain'], 'statLeft', 0);
+    createSecHeader('Best Selling Tickets', 'bestTixHead', 'bestTixContain')
+    createTicketRow('<i class="fa fa-arrow-up"></i>+%', 'adultTicketSection', 'bestTixContain');
  }
 
 //Initializes page
