@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: arial;
 }
 
 .navbar{
@@ -15,7 +16,7 @@
 
 .sidebar{
     width: 24%;
-    height: 100vh;
+    min-height: 100vh;
     background: #F1F8F9;
     
 }
@@ -30,4 +31,45 @@
 
 .header{
     width: 100%;
+}
+
+.festivalImg{
+    display: inline-block;
+}
+
+.festivalData{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 16px;
+    margin-top: 18px;
+}
+
+.festivalImg{
+    margin-left: 2%;
+    margin-top: 5px;
+    width: 10%;
+    border: rgb(242, 242, 242) 2px solid;
+    box-shadow: 5px 5px 2px rgb(242, 242, 242);
+}
+
+.festivalTitle{
+    color: rgb(20, 178, 204);
+    font-size: 2vw;
+    display: inline-block;
+}
+
+.festivalDialog{
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px;
+    background: rgb(20, 178, 204);
+    color: white;
+    border-radius: 4px;
+    font-size: 1vw;
+    vertical-align: top;
+}
+
+.festivalDialog:hover{
+    cursor: pointer;
+    background: rgb(15, 145, 165);
 }
