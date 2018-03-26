@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.main{
+    width: 100%;
+    margin-top: -4px;
+    display: inline-flex;
+}
+
+.sidebar{
+    width: 24%;
+    height: 100vh;
+    background: #F1F8F9;
+    
+}
+
+.sidebarImg{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+}
