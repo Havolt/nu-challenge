@@ -46,7 +46,7 @@
  function createSettingsBottom(num, leftInfo, rightInfo){
     creEl('tr', ['settingsBottomTableRow'+num, 'settingsBottomTableRow'], 'settingsBottomTable', 0);
     creEl('td', 'settingsBottomTableLeftVal', 'settingsBottomTableRow'+num, 0, '', leftInfo);
-    creEl('td', 'settingsBottomTableLeftVal', 'settingsBottomTableRow'+num, 0, '', rightInfo);
+    creEl('td', 'settingsBottomTableRightVal', 'settingsBottomTableRow'+num, 0, '', rightInfo);
  }
 
  //List of elements to be created

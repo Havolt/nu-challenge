@@ -98,6 +98,7 @@
 }
 
 .sectionContain{
+    box-shadow: 5px 5px 2px rgb(242, 242, 242);
     width: 90%;
     margin: 20px auto;
     border: 1px solid #E6E6E6;
@@ -183,3 +184,40 @@
     margin-left: 10%;
 }
 
+.settingsSection{
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.settingsCheckTitle{
+    margin-left: 1%;
+    color: #14B2CC;
+    display: inline-block;
+    font-size: 2vw;
+}
+
+.settingsDescription{
+    font-size: 1vw;
+    padding-bottom: 8px;
+}
+
+.settingsBottom{
+    background: #F6F6F6
+}
+
+.settingsBottomTable{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.settingsBottomTableLeftVal{
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.settingsBottomTableRightVal{
+    font-size: 1vw;
+}
