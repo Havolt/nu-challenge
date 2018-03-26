@@ -19,7 +19,7 @@
     creEl('img', 'sectionHeadImg', className, 0, 'imgs/nu-section-header-img.png');
  }
 
- function createTicketRow(iconInHL, className, apnd, dataInfoTitle, amtSold, amtTime){
+ function createTicketRow(iconInHL, className, apnd, dataInfoTitle, amtSold, amtTime, evenDiv){
      creEl('div', [className, 'ticketSection'], apnd, 0);
      creEl('div', ['ticketSectionIcon', className + 'ticketSectionIcon'], className, 0, '', iconInHL);
      creEl('div', ['ticketsSectionData', className + 'ticketSectionData'], className, 0);
@@ -31,6 +31,22 @@
      creEl('div', ['ticketsSectionDatesInfo', className + 'ticketsSectionDatesInfo'], className + 'ticketSectionData', 0);
      creEl('div', ['ticketsSectionDatesInfoSold', className + 'ticketsSectionDatesInfoSold'], className + 'ticketsSectionDatesInfo', 0, '', amtSold);
      creEl('div', ['ticketsSectionDatesInfoTime', className + 'ticketsSectionDatesInfoTime'], className + 'ticketsSectionDatesInfo', 0, '', amtTime);
+     if(evenDiv){document.getElementsByClassName(className)[0].classList.add('ticketSectionGrey')}
+ }
+
+ function createSettingsRow(className, apnd, title, desc){
+    creEl('div', [className, 'settingsSection'], apnd, 0);
+    creEl('div', ['settingsCheckSection', className + 'settingsCheckSection'], className, 0);
+    creEl('input', ['settingsCheckBox', className + 'settingsCheckBox' ], className + 'settingsCheckSection', 0)
+    document.getElementsByClassName(className + 'settingsCheckBox')[0].type="checkbox";
+    creEl('div', 'settingsCheckTitle', className + 'settingsCheckSection', 0, '', title );
+    creEl('div', 'settingsDescription', className, 0, '', desc );
+ }
+
+ function createSettingsBottom(num, leftInfo, rightInfo){
+    creEl('tr', ['settingsBottomTableRow'+num, 'settingsBottomTableRow'], 'settingsBottomTable', 0);
+    creEl('td', 'settingsBottomTableLeftVal', 'settingsBottomTableRow'+num, 0, '', leftInfo);
+    creEl('td', 'settingsBottomTableLeftVal', 'settingsBottomTableRow'+num, 0, '', rightInfo);
  }
 
  //List of elements to be created
@@ -72,11 +88,22 @@
     creEl('div', ['sectionContain','bestTixContain'], 'statLeft', 0);
     createSecHeader('Best Selling Tickets', 'bestTixHead', 'bestTixContain')
     createTicketRow('<i class="fa fa-arrow-up"></i>+%', 'adultTicketSection', 'bestTixContain', 'Adult - General', '50 sold since Jan 17', '20% more sold than last period');
-    createTicketRow('<i class="fa fa-arrow-down"></i>-%', 'childTicketSection', 'bestTixContain', 'Child Ticket - General', '12 sold since Jan 17', '20% less sold than last period');
+    createTicketRow('<i class="fa fa-arrow-down"></i>-%', 'childTicketSection', 'bestTixContain', 'Child Ticket - General', '12 sold since Jan 17', '20% less sold than last period', true);
     createTicketRow('<i class="fa fa-eye-slash"></i>', 'childTicketHiddenSection', 'bestTixContain', 'Child Ticket - General - Hidden', '3 sold since Jan 17', '20% more than last period');
-    createTicketRow('<i class="fa fa-times"></i>', 'childTicketNoSaleSection', 'bestTixContain', 'Child Ticket - General', 'Not on Sale', 'Ticket is out of stock');
+    createTicketRow('<i class="fa fa-times"></i>', 'childTicketNoSaleSection', 'bestTixContain', 'Child Ticket - General', 'Not on Sale', 'Ticket is out of stock', true);
     createTicketRow('<i class="fa fa-calendar"></i>', 'childTicketUpcoming', 'bestTixContain', 'Child Ticket - General', 'Upcoming Sale', 'Ticket is on sale from tomorrow');
- }
+    creEl('div', ['sectionContain','quickSettingsContain'], 'statLeft', 0);
+    createSecHeader('Quick Settings', 'quickSettingsHead', 'quickSettingsContain')
+    createSettingsRow('settingsSec1', 'quickSettingsContain', 'Lorem ipsum dolor sit amet', 'Vestibulum quis nulla dui. Donec dapibus, neque ac pulvinar fringilla');
+    createSettingsRow('settingSec2', 'quickSettingsContain', 'Duis rhoncus leo diam', 'Pellentesque a fringilla nisi. Aliquam bibendum nisi est' );
+    createSettingsRow('settingSec3', 'quickSettingsContain', 'Caributur sed tincidunt lorem', 'Suspendisse auctor arcu ul leo venenatis, eget dignissum nunc luctus');
+    creEl('div', 'settingsBottom', 'quickSettingsContain', 0);
+    creEl('table', 'settingsBottomTable', 'settingsBottom', 0 );
+    createSettingsBottom(0, 'PurchaserData', 'Optional');
+    createSettingsBottom(1, 'Shared Data', 'Optional');
+    createSettingsBottom(2, 'Sharing Options', 'Sharing not required');
+    createSettingsBottom(3, 'Purchase Limit', 'No limit (per purchaser)');
+}
 
 //Initializes page
 (function initPage(){

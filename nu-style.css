@@ -99,7 +99,7 @@
 
 .sectionContain{
     width: 90%;
-    margin: 40px auto;
+    margin: 20px auto;
     border: 1px solid #E6E6E6;
 }
 
@@ -147,7 +147,8 @@
     float: left;
 }
 
-.ticketsSectionData{
+.ticketSectionGrey{
+    background: rgb(231, 231, 231);
 }
 
 .ticketsSectionDataInfo{
