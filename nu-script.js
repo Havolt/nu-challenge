@@ -19,9 +19,18 @@
     creEl('img', 'sectionHeadImg', className, 0, 'imgs/nu-section-header-img.png');
  }
 
- function createTicketRow(iconInHL, className, apnd){
+ function createTicketRow(iconInHL, className, apnd, dataInfoTitle, amtSold, amtTime){
      creEl('div', [className, 'ticketSection'], apnd, 0);
-     creEl('div', 'ticketSectionIcon', className, 0, '', iconInHL);
+     creEl('div', ['ticketSectionIcon', className + 'ticketSectionIcon'], className, 0, '', iconInHL);
+     creEl('div', ['ticketsSectionData', className + 'ticketSectionData'], className, 0);
+     creEl('div', ['ticketsSectionDataInfo', className + 'ticketsSectionDataInfo'], className + 'ticketSectionData', 0);
+     creEl('div', ['ticketsSectionDataInfoTitle'], className + 'ticketsSectionDataInfo', 0, '', dataInfoTitle );
+     creEl('div', ['ticketsSectionDataInfoButtons', className + 'ticketsSectionDataInfoButtons' ],  className + 'ticketsSectionDataInfo', 0)
+     creEl('div', ['ticketsSectionDataInfoEditButton', 'ticketsSectionDataInfoButton'], className + 'ticketsSectionDataInfoButtons', 0, '', 'Edit');
+     creEl('div', ['ticketsSectionDataInfoViewButton' , 'ticketsSectionDataInfoButton'], className + 'ticketsSectionDataInfoButtons', 0, '', 'View');
+     creEl('div', ['ticketsSectionDatesInfo', className + 'ticketsSectionDatesInfo'], className + 'ticketSectionData', 0);
+     creEl('div', ['ticketsSectionDatesInfoSold', className + 'ticketsSectionDatesInfoSold'], className + 'ticketsSectionDatesInfo', 0, '', amtSold);
+     creEl('div', ['ticketsSectionDatesInfoTime', className + 'ticketsSectionDatesInfoTime'], className + 'ticketsSectionDatesInfo', 0, '', amtTime);
  }
 
  //List of elements to be created
@@ -62,7 +71,11 @@
     //Make Left Hand Stats Section Contents
     creEl('div', ['sectionContain','bestTixContain'], 'statLeft', 0);
     createSecHeader('Best Selling Tickets', 'bestTixHead', 'bestTixContain')
-    createTicketRow('<i class="fa fa-arrow-up"></i>+%', 'adultTicketSection', 'bestTixContain');
+    createTicketRow('<i class="fa fa-arrow-up"></i>+%', 'adultTicketSection', 'bestTixContain', 'Adult - General', '50 sold since Jan 17', '20% more sold than last period');
+    createTicketRow('<i class="fa fa-arrow-down"></i>-%', 'childTicketSection', 'bestTixContain', 'Child Ticket - General', '12 sold since Jan 17', '20% less sold than last period');
+    createTicketRow('<i class="fa fa-eye-slash"></i>', 'childTicketHiddenSection', 'bestTixContain', 'Child Ticket - General - Hidden', '3 sold since Jan 17', '20% more than last period');
+    createTicketRow('<i class="fa fa-times"></i>', 'childTicketNoSaleSection', 'bestTixContain', 'Child Ticket - General', 'Not on Sale', 'Ticket is out of stock');
+    createTicketRow('<i class="fa fa-calendar"></i>', 'childTicketUpcoming', 'bestTixContain', 'Child Ticket - General', 'Upcoming Sale', 'Ticket is on sale from tomorrow');
  }
 
 //Initializes page

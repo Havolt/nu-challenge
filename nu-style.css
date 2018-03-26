@@ -100,12 +100,13 @@
 .sectionContain{
     width: 90%;
     margin: 40px auto;
+    border: 1px solid #E6E6E6;
 }
 
 .sectionHead{
     background: #F6F6F6;
     color: rgb(20, 178, 204);
-    border: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
     overflow-y: hidden;
 }
 
@@ -120,7 +121,64 @@
     display: inline-block;
     width: 40%;
     float: right;
-    
 }
 
+.ticketsSection{
+    
+    margin-bottom: 20px;
+}
+
+
+
+.ticketSectionIcon{
+    margin-top: 2%;
+    margin-left: 2%;
+    background: rgb(242, 147, 35);
+    border-radius: 50%;
+    color: white;
+    width: 11%;
+    height: 0;
+    text-align: center;
+    padding: 3% 0 8% 0;
+    font-size: 1.5vw;
+    margin-right: 0;
+    vertical-align: top;
+    display: inline-block;
+    float: left;
+}
+
+.ticketsSectionData{
+}
+
+.ticketsSectionDataInfo{
+    margin-top: 2%;
+    margin-left: 2%;
+    display: inline-block;
+    width: 38%;
+    font-size: 1.1vw;
+    padding-bottom: 16px;
+}
+
+.ticketsSectionDatesInfo{
+    display: inline-block;
+    font-size: 1.1vw;
+    margin-top: 3%;
+    padding-right: 8px;
+    float: right;
+    text-align: right;
+}
+
+.ticketsSectionDataInfoButtons{
+    margin-top: 2%;
+}
+
+.ticketsSectionDataInfoButton{
+    display: inline-block;
+    background: rgb(221, 221, 221);
+    padding: 3px 10px;
+}
+
+.ticketsSectionDataInfoViewButton{
+    margin-left: 10%;
+}
 
