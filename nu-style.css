@@ -95,6 +95,7 @@
 .statBox{
     width: 50%;
     display: inline-block;
+    vertical-align: top;
 }
 
 .sectionContain{
@@ -220,4 +221,9 @@
 
 .settingsBottomTableRightVal{
     font-size: 1vw;
+}
+
+.countdownContain{
+    background: rgb(20, 178, 204);
+    color: white;
 }

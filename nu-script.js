@@ -49,6 +49,12 @@
     creEl('td', 'settingsBottomTableRightVal', 'settingsBottomTableRow'+num, 0, '', rightInfo);
  }
 
+ function createSettingsCountdown(name, topHTML, bottomHTML){
+    creEl('div', ['countdown'+name+'ContainText', 'countdownContainText'], 'countdownContain', 0);
+    creEl('div', ['counddown'+name+'ContainTop', 'countdownContainTop'], 'countdown'+name+'ContainText', 0, '', topHTML);
+    creEl('div', ['countdown'+name+'ContainBottom', 'countdownContainBottom'], 'countdown'+name+'ContainText', 0, '', bottomHTML);
+ }
+
  //List of elements to be created
  function makeElList(){
     creEl('div', 'site', 'app', 0);
@@ -103,6 +109,11 @@
     createSettingsBottom(1, 'Shared Data', 'Optional');
     createSettingsBottom(2, 'Sharing Options', 'Sharing not required');
     createSettingsBottom(3, 'Purchase Limit', 'No limit (per purchaser)');
+    //Make Right Hand Stats Section Contents
+    creEl('div', ['sectionContain', 'countdownContain'], 'statRight', 0);
+    createSettingsCountdown('days', '48 days', 'till event\'s start');
+    createSettingsCountdown('tickets', '12,642', 'tickets sold');
+    createSettingsCountdown('guests', '648', 'guests');
 }
 
 //Initializes page
