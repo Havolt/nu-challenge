@@ -145,8 +145,11 @@
     creEl('div', 'facebookMainSec', 'facebookContain', 0)
     creEl('div', 'facebookPublishSec', 'facebookMainSec', 0);
     creEl('div', 'facebookPublishIcon', 'facebookPublishSec', 0, '', '<i class="fa fa-dot-circle-o"></i>')
-    creEl('div', 'facebookPublishTitle', 'facebookPublishSec', 0, '', 'Publish on Facebook');
-    creEl('div', 'facebookPublishDesc', 'facebookPublishSec', 0, '', 'You can post to one of your Facebook pages allowing your customers to register for a guest link with one click. </br> There are no Facebook Guest lists for this event, to add a Facebook Guest list, click here.');
+    creEl('div', 'facebookPublishText', 'facebookPublishSec', 0);
+    creEl('div', 'facebookPublishTitle', 'facebookPublishText', 0, '', 'Publish on Facebook');
+    creEl('div', 'facebookPublishDesc', 'facebookPublishText', 0, '', 'You can post to one of your Facebook pages allowing your customers to register for a guest link with one click. </br> There are no Facebook Guest lists for this event, to add a Facebook Guest list, click here.');
+    creEl('div', 'facebookIconSec', 'facebookMainSec', 0);
+    creEl('div', 'facebookIcon', 'facebookIconSec', 0, '', '<i class="fa fa-facebook"></i>' );
 }
 
 //Initializes page

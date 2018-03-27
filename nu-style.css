@@ -296,3 +296,56 @@
 .attendanceRightEmail{
     color: rgb(20, 178, 204);
 }
+
+.facebookHead > img{
+    height: 50px;
+}
+
+.facebookPublishSec{
+    width: 80%;
+    display: inline-block;
+}
+
+.facebookPublishIcon{
+    color: rgb(20, 178, 204);
+    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-left: 4%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.5vw;
+    
+}
+
+.facebookPublishText{
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 3%;
+    width: 80%;
+}
+
+.facebookPublishTitle{
+    color: rgb(20, 178, 204);
+    font-size: 1.6vw;
+}
+
+.facebookPublishDesc{
+    font-size: 1vw;
+    padding-bottom: 8px;
+}
+
+.facebookIconSec{
+    width: 20%;
+    display: inline-block;
+    position: relative;
+}
+
+.facebookIcon{
+    position: absolute;
+    right: 8%;
+    bottom: 75%;
+    background: rgb(20, 178, 204);
+    color: white;
+    padding: 8px;
+    font-size: 2.2vw;
+}
