@@ -249,3 +249,13 @@
     font-size: 1.5vw;
     color: rgba(255,255,255, 0.7)
 }
+
+.reportsOptions{
+    padding: 8px 0;
+}
+
+.reportsOptionsText{
+    
+    display: inline-block;
+    margin-left: 8%;
+}

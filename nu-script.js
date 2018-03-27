@@ -55,6 +55,18 @@
     creEl('div', ['countdown'+name+'ContainBottom', 'countdownContainBottom'], 'countdown'+name+'ContainText', 0, '', bottomHTML);
  }
 
+ function createAttendanceRow(className, titleHL){
+     creEl('div', ['attendanceSection', className + 'AttendanceSection'], 'attendanceContain', 0 );
+     creEl('div', ['attendanceSecLeft', className + 'AttendanceSecLeft'], className + 'AttendanceSection', 0);
+     creEl('div', ['attendanceSecRight', className + 'AttendanceSecRight'], className + 'AttendanceSection', 0);
+     creEl('div', 'attendanceLeftTitle', className + 'AttendanceSecLeft', 0, '', titleHL);
+     creEl('div', 'attendanceLeftButton', className + 'AttendanceSecLeft', 0, '', 'View');
+     creEl('div', 'attendanceLeftButton', className + 'AttendanceSecLeft', 0, '', 'Order Details');
+     creEl('div', 'attendanceRightName', className + 'AttendanceSecRight', 0, '', 'John Doe');
+     creEl('div', 'attendanceRightEmail', className + 'AttendanceSecRight', 0, '', '&lt;johndoe@gmail.com&gt;'+'<i class="fa fa-arrow-down"></i>')
+     creEl('div', 'attendanceRightDate', className + 'AttendanceSecRight', 0, '', 'Applied: 13th of May 2014 at 10:27');
+ }1
+
  //List of elements to be created
  function makeElList(){
     creEl('div', 'site', 'app', 0);
@@ -114,6 +126,15 @@
     createSettingsCountdown('days', '48 days', 'till event\'s start');
     createSettingsCountdown('tickets', '12,642', 'tickets sold');
     createSettingsCountdown('guests', '648', 'guests');
+    creEl('div', ['sectionContain', 'reportsContain'], 'statRight', 0);
+    createSecHeader('Reports', 'reportsHead', 'reportsContain');
+    creEl('div', 'reportsOptions', 'reportsContain', 0)
+    creEl('div', ['reportsOptionsSales', 'reportsOptionsText'], 'reportsOptions', 0, '', 'Sales');
+    creEl('div', ['reportsOptionsTickets', 'reportsOptionsText'], 'reportsOptions', 0, '', 'Tickets');
+    creEl('div', 'reportsGraph', 'reportsContain', 0);
+    creEl('div', ['sectionContain', 'attendanceContain'], 'statRight', 0);
+    createSecHeader('Attendance', 'attendanceHead', 'attendanceContain');
+    createAttendanceRow('adultGen', 'Adult - General')
 }
 
 //Initializes page
