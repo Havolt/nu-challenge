@@ -102,6 +102,7 @@
     creEl('div', 'statisticsSection', 'content', 0);
     creEl('div', ['statLeft', 'statBox'], 'statisticsSection', 0);
     creEl('div', ['statRight', 'statBox'], 'statisticsSection', 0);
+    creEl('div', 'statBottom', 'statisticsSection', 0);
     //Make Left Hand Stats Section Contents
     creEl('div', ['sectionContain','bestTixContain'], 'statLeft', 0);
     createSecHeader('Best Selling Tickets', 'bestTixHead', 'bestTixContain')
@@ -138,6 +139,14 @@
     createAttendanceRow('childGen', 'Child Ticket - General');
     document.getElementsByClassName('childGenAttendanceSection')[0].classList.add('ticketSectionGrey');
     createAttendanceRow('childGen2', 'Child Ticket - General');
+    //Make Bottom Stats Section Contents
+    creEl('div', ['sectionContain', 'facebookContain'], 'statBottom', 0);
+    createSecHeader('Facebook Guest List Registration', 'facebookHead', 'facebookContain');
+    creEl('div', 'facebookMainSec', 'facebookContain', 0)
+    creEl('div', 'facebookPublishSec', 'facebookMainSec', 0);
+    creEl('div', 'facebookPublishIcon', 'facebookPublishSec', 0, '', '<i class="fa fa-dot-circle-o"></i>')
+    creEl('div', 'facebookPublishTitle', 'facebookPublishSec', 0, '', 'Publish on Facebook');
+    creEl('div', 'facebookPublishDesc', 'facebookPublishSec', 0, '', 'You can post to one of your Facebook pages allowing your customers to register for a guest link with one click. </br> There are no Facebook Guest lists for this event, to add a Facebook Guest list, click here.');
 }
 
 //Initializes page
