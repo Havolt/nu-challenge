@@ -63,7 +63,7 @@
      creEl('div', 'attendanceLeftButton', className + 'AttendanceSecLeft', 0, '', 'View');
      creEl('div', 'attendanceLeftButton', className + 'AttendanceSecLeft', 0, '', 'Order Details');
      creEl('div', 'attendanceRightName', className + 'AttendanceSecRight', 0, '', 'John Doe');
-     creEl('div', 'attendanceRightEmail', className + 'AttendanceSecRight', 0, '', '&lt;johndoe@gmail.com&gt;'+'<i class="fa fa-arrow-down"></i>')
+     creEl('div', 'attendanceRightEmail', className + 'AttendanceSecRight', 0, '', '&lt;johndoe@gmail.com&gt;'+'<i class="fa fa-caret-down"></i>')
      creEl('div', 'attendanceRightDate', className + 'AttendanceSecRight', 0, '', 'Applied: 13th of May 2014 at 10:27');
  }1
 
@@ -134,7 +134,10 @@
     creEl('div', 'reportsGraph', 'reportsContain', 0);
     creEl('div', ['sectionContain', 'attendanceContain'], 'statRight', 0);
     createSecHeader('Attendance', 'attendanceHead', 'attendanceContain');
-    createAttendanceRow('adultGen', 'Adult - General')
+    createAttendanceRow('adultGen', 'Adult - General');
+    createAttendanceRow('childGen', 'Child Ticket - General');
+    document.getElementsByClassName('childGenAttendanceSection')[0].classList.add('ticketSectionGrey');
+    createAttendanceRow('childGen2', 'Child Ticket - General');
 }
 
 //Initializes page

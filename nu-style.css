@@ -259,3 +259,40 @@
     display: inline-block;
     margin-left: 8%;
 }
+
+.attendanceSection{
+    padding-top: 10px;
+}
+
+.attendanceSecLeft{
+    width: 50%;
+    display: inline-block;
+}
+
+.attendanceSecRight{
+    width: 50%;
+    display: inline-block;
+}
+
+.attendanceLeftTitle{
+    margin-left: 5%;
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 1.4vw
+}
+
+.attendanceLeftButton{
+    margin-left: 5%;
+    margin-bottom: 10px;
+    padding: 3px;
+    background: #DDDDDD;
+    display: inline-block;
+}
+
+.attendanceSecRight{
+    font-size: 1.1vw;
+}
+
+.attendanceRightEmail{
+    color: rgb(20, 178, 204);
+}
